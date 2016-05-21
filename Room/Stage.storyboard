@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q17-by-0zY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Room name-->
+        <scene sceneID="c0n-Zs-Upu">
+            <objects>
+                <viewController id="Q17-by-0zY" customClass="RoomStage" customModule="Room" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NNg-BM-YZL"/>
+                        <viewControllerLayoutGuide type="bottom" id="hhQ-bq-Ohi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KB9-Wd-jIL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YO7-ie-iqz" customClass="MessagesTableView" customModule="Room" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="95" id="pge-07-LYj" customClass="MessageCell" customModule="Room" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="pge-07-LYj" id="guH-O7-Lyg">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="94.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZuV-61-MU4">
+                                                    <rect key="frame" x="15" y="10" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="3Rt-16-PUu"/>
+                                                        <constraint firstAttribute="width" constant="44" id="yhY-YB-ADw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg8-sJ-OLs">
+                                                    <rect key="frame" x="556" y="10" width="29" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhD-pN-5b1">
+                                                    <rect key="frame" x="67" y="10" width="87" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Body Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HJt-XU-N50">
+                                                    <rect key="frame" x="67" y="31" width="518" height="54"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Bg8-sJ-OLs" firstAttribute="top" secondItem="guH-O7-Lyg" secondAttribute="topMargin" id="3XE-GN-VZN"/>
+                                                <constraint firstItem="ZuV-61-MU4" firstAttribute="top" secondItem="guH-O7-Lyg" secondAttribute="topMargin" id="7du-7F-rUa"/>
+                                                <constraint firstItem="HJt-XU-N50" firstAttribute="leading" secondItem="qhD-pN-5b1" secondAttribute="leading" id="8HI-Lr-UPF"/>
+                                                <constraint firstItem="HJt-XU-N50" firstAttribute="top" secondItem="qhD-pN-5b1" secondAttribute="bottom" constant="4" id="CiG-vU-hmB"/>
+                                                <constraint firstItem="qhD-pN-5b1" firstAttribute="top" secondItem="guH-O7-Lyg" secondAttribute="topMargin" id="Csb-Jr-7YH"/>
+                                                <constraint firstItem="Bg8-sJ-OLs" firstAttribute="trailing" secondItem="guH-O7-Lyg" secondAttribute="trailingMargin" id="Fsj-7A-A4Q"/>
+                                                <constraint firstItem="ZuV-61-MU4" firstAttribute="leading" secondItem="guH-O7-Lyg" secondAttribute="leadingMargin" id="SHi-aP-tmN"/>
+                                                <constraint firstItem="qhD-pN-5b1" firstAttribute="leading" secondItem="ZuV-61-MU4" secondAttribute="trailing" constant="8" id="dkj-Zm-Ae6"/>
+                                                <constraint firstItem="HJt-XU-N50" firstAttribute="bottom" secondItem="guH-O7-Lyg" secondAttribute="bottomMargin" id="rCb-YX-6S3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="HJt-XU-N50" secondAttribute="trailing" id="xXw-3f-iyP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorImageView" destination="ZuV-61-MU4" id="khG-Zw-PXs"/>
+                                            <outlet property="authorNameLabel" destination="qhD-pN-5b1" id="G7Q-QG-DgE"/>
+                                            <outlet property="bodyTextView" destination="HJt-XU-N50" id="Azp-Za-3Ac"/>
+                                            <outlet property="dateLabel" destination="Bg8-sJ-OLs" id="6sR-hS-57k"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YO7-ie-iqz" firstAttribute="leading" secondItem="KB9-Wd-jIL" secondAttribute="leading" id="EQ6-Xe-xnF"/>
+                            <constraint firstItem="hhQ-bq-Ohi" firstAttribute="top" secondItem="YO7-ie-iqz" secondAttribute="bottom" id="UWE-sn-gDD"/>
+                            <constraint firstItem="YO7-ie-iqz" firstAttribute="top" secondItem="KB9-Wd-jIL" secondAttribute="top" id="hLE-1f-zi6"/>
+                            <constraint firstAttribute="trailing" secondItem="YO7-ie-iqz" secondAttribute="trailing" id="zJO-2v-E6z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Room name" id="dNl-bF-5Qj"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="YO7-ie-iqz" id="7bt-a4-l8J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0dy-DZ-DeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="581" y="513"/>
+        </scene>
+    </scenes>
+</document>
