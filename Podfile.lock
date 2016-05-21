@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (3.4.0)
+  - AlamofireImage (2.4.0):
+    - Alamofire (~> 3.3)
+  - AlamofireReactive (1.0.2):
+    - Alamofire (~> 3.3)
+    - ReactiveKit (~> 2.0.0)
+  - JSONCodable (2.1)
+  - ReactiveKit (2.0.0)
+  - ReactiveUIKit (2.0.0):
+    - ReactiveKit (~> 2.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.3)
+  - AlamofireImage (~> 2.0)
+  - AlamofireReactive (~> 1.0)
+  - JSONCodable (~> 2.1)
+  - ReactiveKit (~> 2.0)
+  - ReactiveUIKit (~> 2.0)
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  AlamofireReactive: fba329f36127769efe74de853526b4ed3e66d065
+  JSONCodable: d3bb8d1323bb4cbc381b16219046c5282565a4f1
+  ReactiveKit: 10a5e48464e1cbb3ea0f1b26897c1034718cba3b
+  ReactiveUIKit: ed242263b304f4435cdd3debf3283edccd078352
+
+PODFILE CHECKSUM: f13680a2b4145817533a39eb025e6cce41bd525d
+
+COCOAPODS: 1.0.0
