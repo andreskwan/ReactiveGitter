@@ -27,14 +27,14 @@ import JSONCodable
 public struct Room {
   public let id: String
   public let name: String            // Room name.
-  public let uri: String             // Room URI on Gitter.
+  public let uri: String!            // Room URI on Gitter.
   public let topic: String           // Room topic. (default: GitHub repo description)
   public let oneToOne: Bool          // Indicates if the room is a one-to-one chat.
   public let users: [User]           // List of users in the room.
   public let userCount: Int          // Count of users in the room.
   public let unreadItems: Int        // Number of unread messages for the current user.
   public let mentions: Int           // Number of unread mentions for the current user.
-  public let lastAccessTime: String  // Last time the current user accessed the room in ISO format.
+  public let lastAccessTime: String! // Last time the current user accessed the room in ISO format.
   public let favourite: Bool         // Indicates if the room is on of your favourites.
   public let lurk: Bool              // Indicates if the current user has disabled notifications.
   public let url: String             // Path to the room on gitter.
