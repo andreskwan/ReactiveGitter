@@ -6,9 +6,9 @@ PODS:
     - Alamofire (~> 3.3)
     - ReactiveKit (~> 2.0.0)
   - JSONCodable (2.1)
-  - ReactiveKit (2.0.0)
-  - ReactiveUIKit (2.0.0):
-    - ReactiveKit (~> 2.0.0)
+  - ReactiveKit (2.0.1)
+  - ReactiveUIKit (2.0.1):
+    - ReactiveKit (~> 2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.3)
@@ -23,8 +23,8 @@ SPEC CHECKSUMS:
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
   AlamofireReactive: fba329f36127769efe74de853526b4ed3e66d065
   JSONCodable: d3bb8d1323bb4cbc381b16219046c5282565a4f1
-  ReactiveKit: 10a5e48464e1cbb3ea0f1b26897c1034718cba3b
-  ReactiveUIKit: ed242263b304f4435cdd3debf3283edccd078352
+  ReactiveKit: 5532dcc7fb4fb50796003e00e1080af8dd02281b
+  ReactiveUIKit: af6e401a61d196502267ff216b7ac6f4c37c0dc5
 
 PODFILE CHECKSUM: 5c236c3d336ff4021748e678cf2d310cd2ab9692
 
