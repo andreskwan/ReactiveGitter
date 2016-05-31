@@ -1,6 +1,6 @@
 # ReactiveGitter
 
-A ReactiveKit demo app.
+A ReactiveKit demo app. Check out [this](http://rasic.info/a-different-take-on-mvvm-with-swift/) for more info on the app architecture.
 
 ## Installation
 
