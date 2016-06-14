@@ -60,11 +60,11 @@ class HomeStage: DirectedViewController<Director>, UITableViewDelegate {
 private extension UITableView {
 
   var selectedRow: Stream<Int> {
-    return rDelegate.streamFor(#selector(UITableViewDelegate.tableView(_:didSelectRowAtIndexPath:))) { (a: UITableView, b: NSIndexPath) in b.row }
+    return rDelegate.stream(#selector(UITableViewDelegate.tableView(_:didSelectRowAtIndexPath:))) { (s: PushStream<Int>, _: UITableView, b: NSIndexPath) in s.next(b.row) }
   }
 
   var leaveRoomAtIndexPath: Stream<Int> {
-    return rDataSource.streamFor(#selector(UITableViewDataSource.tableView(_:commitEditingStyle:forRowAtIndexPath:))) { (_: UITableView, _: UITableViewCellEditingStyle, indexPath: NSIndexPath) in indexPath.row }
+    return rDataSource.stream(#selector(UITableViewDataSource.tableView(_:commitEditingStyle:forRowAtIndexPath:))) { (s: PushStream<Int>, _: UITableView, _: UITableViewCellEditingStyle, indexPath: NSIndexPath) in s.next(indexPath.row) }
   }
 }
 extension Stage {

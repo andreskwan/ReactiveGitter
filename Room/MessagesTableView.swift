@@ -48,8 +48,10 @@ class MessagesTableView: UITableView {
 
   var loadMoreMessages: Stream<Void> {
     return rDelegate
-      .streamFor(#selector(UITableViewDelegate.scrollViewDidScroll(_:)),
-        map: { (scrollView: UIScrollView) -> (CGFloat, CGFloat) in (scrollView.contentOffset.y, scrollView.contentInset.top) })
+      .stream(#selector(UITableViewDelegate.scrollViewDidScroll(_:)))
+      { (s: PushStream<(CGFloat, CGFloat)>, scrollView: UIScrollView) in
+        s.next((scrollView.contentOffset.y, scrollView.contentInset.top))
+      }
       .map { $0 < -$1 }
       .distinct()
       .filter { $0 }
